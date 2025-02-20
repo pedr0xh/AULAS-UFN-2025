@@ -107,33 +107,29 @@ Essa operação satisfaz as propriedades descritas a seguir, considerando que \(
 
 - **Elemento Neutro à Esquerda e à Direita**:  
   \[
-  \varepsilon w = w = w \varepsilon
+  \Ew = w = wE
   \]
 
 📌 **Observação**: A concatenação de duas palavras de uma determinada linguagem não necessariamente resulta em uma palavra desta mesma linguagem (não é uma operação fechada sobre a linguagem).  
 
 ---
 
-## 🔁 Definição 7: Concatenação Sucessiva  
+### 🔁 Definição 7: Concatenação Sucessiva  
 
-A **concatenação sucessiva** de uma palavra (com ela mesma), \( w^n \), é definida como segue:  
+A concatenação sucessiva de uma palavra \( w^n \) é definida como:
 
-✅ **Caso 1**: \( w \neq \varepsilon \)  
-
+**a) Se \( w \neq \varepsilon \)**  
 \[
 w^0 = \varepsilon
 \]
-
 \[
 w^n = w^{n-1} w, \quad \text{para } n > 0
 \]
 
-✅ **Caso 2**: \( w = \varepsilon \)  
-
+**b) Se \( w = \varepsilon \)**  
 \[
 w^0 \text{ é indefinida.}
 \]
-
 \[
 w^n = \varepsilon, \quad \text{para } n > 0
 \]
