@@ -47,4 +47,9 @@ Um **autômato** é uma máquina de estados finitos. Para ilustrar, vamos consid
 ## Formalismo usados
   - **Formalismo Operacional ou Reconhecedor**: Autômato = Máquina abstrata
   - **Formalismo Axiomático ou Gerador**: Gramática = regras associadas ao comportamento da linguagem
-  - **Formalismo Detacional**: Expressão Regular   
+  - **Formalismo Detacional**: Expressão Regular
+
+## Alfabeto
+  Σ diferente da matematica onde está relacionado ao somatorio, aqui usaremos para se referir ao alfabeto
+    Σ¹ = {a,b,c,d}
+    Σ² = {0,1,2,3}
