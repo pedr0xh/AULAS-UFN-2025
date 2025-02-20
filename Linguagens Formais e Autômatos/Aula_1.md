@@ -43,3 +43,8 @@ Um **autômato** é uma máquina de estados finitos. Para ilustrar, vamos consid
 ## Semântica
 - **Definição**: Relaciona-se ao **sentido** ou **significado** das palavras e frases.
 - **Exemplo**: Define o que uma frase ou expressão realmente quer dizer, além de sua estrutura.
+
+## Formalismo usados
+  - **Formalismo Operacional ou Reconhecedor**: Autômato = Máquina abstrata
+  - **Formalismo Axiomático ou Gerador**: Gramática = regras associadas ao comportamento da linguagem
+  - **Formalismo Detacional**: Expressão Regular   
