@@ -49,7 +49,30 @@ Um **autômato** é uma máquina de estados finitos. Para ilustrar, vamos consid
   - **Formalismo Axiomático ou Gerador**: Gramática = regras associadas ao comportamento da linguagem
   - **Formalismo Detacional**: Expressão Regular
 
-## Alfabeto
+## Alfabeto, Palavras, Linguagens
+
+ ## Definição 1: Alfabeto
   Σ diferente da matematica onde está relacionado ao somatorio, aqui usaremos para se referir ao alfabeto
     Σ¹ = {a,b,c,d}
-    Σ² = {0,1,2,3}
+    Σ² = {0,1}
+
+## Definição 2: Palavras
+  Σ*² = {,00,01,10,11,0,1,000,001...} - Todas as palavra e tambem a palavra vazia
+  Σ+² = {00,01,10,11,0,1,000,001...} - Todas as palavras com execção da palavra vazia
+
+## Definição 3:Tamanho ou comprimento 
+  Representado por |W|
+
+## Definição 4: Prefixo, Sufixo, Subpalavra
+  Prefixo de uma palavra é qualquer sequência inicial de símbolos da palavra.
+  Sufixo de uma palavra é qualquer sequência final de símbolos da palavra.
+  Subpalavra de uma palavra é qualquer sequência de símbolos contígua da palavra.
+
+## Definição 5: Linguagem Formal
+  Uma linguagem formal é um conjunto de palavras sobre um alfabeto
+  L¹ = {W ∈ Σ+ | Σ = {0,1} e W tem sufixo 0} // Representação por compreemsão
+  ou
+  L¹ = {0,10,000,010,110,...} // Representação por extensão
+
+  L² = {W ∈ {0,1}* | W tem prefixo 11} 
+  
