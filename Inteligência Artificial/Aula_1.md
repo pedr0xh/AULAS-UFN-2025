@@ -135,4 +135,20 @@ Total acumulado: 17 minutos.
 Estado: {aluno: "direita", professora: "direita", zelador: "direita", cientista: "direita", lanterna: "direita"}
 
 
-    
+    Classes 
+Canibal: lado string
+Missionario:  lado string
+
+Metodos: Pra canibal devorar() , if (Canibais > Missionarios && canibais > 1 && missionarios > 1)
+
+Estado inicial: {C1,C2,C3,M1,M2,M3}
+Estado final: {C1,C2,C3,M1,M2,M3}
+
+Mapear as restrições:
+Não pode haver mais canibais que missionarios em um dos lados do rio 
+
+Definir o método meta ou objetivo:
+todos passarem para o outro lado 
+
+
+
