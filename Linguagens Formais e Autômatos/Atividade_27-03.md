@@ -19,37 +19,37 @@ Este repositório contém os autômatos finitos que reconhecem as linguagens ger
 ### 1. Expressões Regulares e seus Autômatos
 
 #### i. (b+ab)*
-![Autômato 1]((https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20114151.png))
+![Autômato 1](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20114151.png)
 
 #### ii. (a+ε)(b+ba)
-![Autômato 2](LINK_DA_IMAGEM)
+![Autômato 2](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20115115.png)
 
 #### iii. (ab+ba)*(aa+bb)
 ![Autômato 3](LINK_DA_IMAGEM)
 
 #### iv. ab(abb*+baa*)*ba
-![Autômato 4](LINK_DA_IMAGEM)
+![Autômato 4](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20115830.png)
 
 #### v. (aa+b)*(a+bb)
-![Autômato 5](LINK_DA_IMAGEM)
+![Autômato 5](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20120118.png)
 
 #### vi. a*(aa+bb)
-![Autômato 6](LINK_DA_IMAGEM)
+![Autômato 6](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20120447.png)
 
 #### vii. b*ab*ab*
-![Autômato 7](LINK_DA_IMAGEM)
+![Autômato 7](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20120655.png)
 
 #### viii. (b+ab)*(ε+a)
-![Autômato 8](LINK_DA_IMAGEM)
+![Autômato 8](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20120836.png)
 
 #### ix. (aa+bb)*(ab)*
-![Autômato 9](LINK_DA_IMAGEM)
+![Autômato 9](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20121057.png)
 
 #### x. (ab+ba)*(aa+bb)*
-![Autômato 10](LINK_DA_IMAGEM)
+![Autômato 10](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20121335.png)
 
 #### xi. (0+1)* (00+01+10+11) (0+1)*
-![Autômato 11](LINK_DA_IMAGEM)
+![Autômato 11](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20121749.png)
 
 ## Como visualizar os autômatos
 
