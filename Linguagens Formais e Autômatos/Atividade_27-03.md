@@ -25,7 +25,7 @@ Este repositório contém os autômatos finitos que reconhecem as linguagens ger
 ![Autômato 2](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20115115.png)
 
 #### iii. (ab+ba)*(aa+bb)
-![Autômato 3](LINK_DA_IMAGEM)
+![Autômato 3](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20114954.png)
 
 #### iv. ab(abb*+baa*)*ba
 ![Autômato 4](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20115830.png)
