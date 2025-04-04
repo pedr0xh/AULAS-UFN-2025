@@ -16,7 +16,7 @@ Este repositório contém os autômatos finitos que reconhecem as linguagens ger
 
 ## Questões
 
-### 1. Expressões Regulares e seus Autômatos
+### 2. Expressões Regulares e seus Autômatos
 
 #### i. (b+ab)*
 ![Autômato 1](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20114151.png)
@@ -51,9 +51,22 @@ Este repositório contém os autômatos finitos que reconhecem as linguagens ger
 #### xi. (0+1)* (00+01+10+11) (0+1)*
 ![Autômato 11](https://github.com/pedr0xh/AULAS-UFN-2025/blob/main/Linguagens%20Formais%20e%20Aut%C3%B4matos/imagens/Captura%20de%20tela%202025-04-04%20121749.png)
 
-## Como visualizar os autômatos
 
-Clique nos links das imagens acima para visualizar os autômatos correspondentes a cada expressão regular.
 
----
+## 3. Identificação das Linguagens Denotadas pelas Expressões Regulares
+
+### i. (aa + b)*(a + aa)  
+**Denota:** Repete várias vezes "aa" e "b", e termina com "a" ou "aa".
+
+### ii. (b + ab)*(ε + a)  
+**Denota:** Repete várias vezes "b" e "ab", e termina com vazio ou "a".
+
+### iii. (ab + ba)(b + a)* ba  
+**Denota:** "ab" ou "ba" como prefixos, seguidos por zero ou mais ocorrências de "b" ou "a", terminando com "ba".
+
+### iv. (0 + 1)* 111 (0 + 1)* 111  
+**Denota:** A sequência "111" aparece como subpalavra duas vezes dentro de qualquer string binária.
+
+### v. (0 + 1)* (10 + 01)  
+**Denota:** Uma string binária que termina com "10" ou "01" como sufixo.
 
