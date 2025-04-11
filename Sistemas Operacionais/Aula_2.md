@@ -38,25 +38,26 @@
 
 ---
 
-## **Algoritmos de Escalonamento**
-### **1. FCFS/FIFO**
-- Primeiro a chegar, primeiro a ser executado.
+## **Políticas de Escalonamento (Algoritmos)**
+### **1. FIFO/FCFS (First-Come, First-Served)**
+- **Não-preemptivo**: Escalona o primeiro processo que chega na fila de prontos.
 - **Problema**: Tempo de espera longo para processos I/O-bound.
 
-### **2. Shortest Job First (SJF)**
-- Executa o processo com **menor surto de CPU** primeiro.
+### **2. SJF (Shortest Job First)**
+- **Não-preemptivo**: Escalona o processo com **menor ciclo de CPU** primeiro.
 - **Ótimo para minimizar tempo de espera médio**.
 - **Desafio**: Prever a duração do próximo surto (usando média exponencial: `τₙ₊₁ = αtₙ + (1-α)τₙ`).
 
 ### **3. Escalonamento por Prioridade**
-- Prioridades internas (ex.: tempo de CPU) ou externas (ex.: importância do processo).
-- **Problema**: *Starvation* (processos de baixa prioridade nunca executam).
-- **Solução**: *Aging* (aumentar prioridade com o tempo).
+- **PCB/descritor** armazena a prioridade do processo.
+- **Tipos**:
+  - **Não-preemptivo**: Processo mantém CPU até liberar, mesmo se chegar outro com prioridade mais alta.
+  - **Preemptivo**: Processo com prioridade mais alta interrompe o atual.
+- **Problema**: *Starvation* (solução: *aging*).
 
 ### **4. Round-Robin (RR)**
-- **Quantum fixo** de tempo para cada processo (ex.: 10 ms).
-- **Vantagem**: Justo e adequado para sistemas interativos.
-- **Desafio**: Escolher o quantum ideal (muito curto → overhead; muito longo → FCFS).
+- **Preemptivo**: **Quantum fixo** de tempo para cada processo (ex.: 10 ms).
+- **Vantagem**: Justo para sistemas interativos.
 
 ### **5. Múltiplas Filas**
 - Filas separadas por critérios (prioridade, tipo de processo).
