@@ -64,15 +64,4 @@ Se `L` é uma Linguagem Regular aceita por um AFD `M = (Σ, Q, δ, q₀, F)` com
 - `L` é **finita** se, e somente se, `M` não aceita uma palavra `w` tal que `n ≤ |w| < 2n`
 - `L` é **infinita** se, e somente se, `M` aceita uma palavra `w` tal que `n ≤ |w| < 2n`
 
----
 
-## Linguagem Regular Infinita (exemplo)
-
-**Perguntas:**
-- Qual a linguagem aceita?
-- Qual a menor palavra aceita cujo tamanho é maior ou igual a 3?
-
-```plaintext
-q0 --a--> q1 --a--> q2
-           |
-           b
