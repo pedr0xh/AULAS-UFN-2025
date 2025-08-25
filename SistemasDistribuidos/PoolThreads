@@ -1,0 +1,14 @@
+Pool de threads 
+o que é ?
+    é um grupo de threads já existentes que estão prontas para serem executadas, então 
+    a pool recebe essas threads e redireciona as tarefas para as threads disponiveis
+
+Exemplo: 
+    Existem 10 atendentes fixos (threads).
+    Os clientes que ligam são as tarefas.
+    Quando um cliente liga, ele é direcionado para o primeiro atendente livre.
+    Se todos estão ocupados, o cliente espera na fila até algum atendente terminar.
+
+Com esse exemplo percebemos que a pool tem um numero fixo de threads, no caso do exemplo 
+seria o atendente, enquanto pode existir diversas tarefas para serem executadas (clientes ligando)
+e caso o numero de tarefas exceda o da pool, esta tarefa entra pra fila de espera  
