@@ -2,49 +2,33 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-
 entity timer is
-generic (
-WIDTH : integer := 32
-);
-port (
-clk : in std_logic;
-rst_n : in std_logic;
-enable : in std_logic;
-limit : in unsigned(WIDTH-1 downto 0);
-expired : out std_logic
-);
-end entity;
+    Port(
+        clk   : in  std_logic;
+        reset : in  std_logic;
+        tick  : out std_logic
+    );
+end timer;
 
-
-architecture rtl of timer is
-signal cnt : unsigned(WIDTH-1 downto 0);
+architecture Behavioral of timer is
+    signal count : unsigned(27 downto 0) := (others => '0'); 
+    constant MAX_COUNT : unsigned(27 downto 0) := x"5F5E0FF"; -- ~1s @ 100MHz
 begin
-expired <= '0';
 
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            count <= (others => '0');
+            tick  <= '0';
+        elsif rising_edge(clk) then
+            if count = MAX_COUNT then
+                count <= (others => '0');
+                tick  <= '1';
+            else
+                count <= count + 1;
+                tick  <= '0';
+            end if;
+        end if;
+    end process;
 
-process(clk)
-begin
-if rising_edge(clk) then
-if rst_n = '0' then
-cnt <= (others => '0');
-expired <= '0';
-else
-if enable = '1' then
-if cnt >= limit then
-cnt <= (others => '0');
-expired <= '1';
-else
-cnt <= cnt + 1;
-expired <= '0';
-end if;
-else
-cnt <= cnt;
-expired <= '0';
-end if;
-end if;
-end if;
-end process;
-
-
-end architecture;
+end Behavioral;
