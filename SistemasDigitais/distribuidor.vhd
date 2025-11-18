@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 
-entity distribuidor_top is
+entity distribuidor is
 generic (
 CLK_FREQ_HZ : integer := 50000000; 
 DEFAULT_INTERVAL_SEC : integer := 10 
@@ -21,7 +21,7 @@ motor_out : out std_logic
 end entity;
 
 
-architecture rtl of distribuidor_top is
+architecture rtl of distribuidor is
 signal interval_ticks : unsigned(31 downto 0);
 signal interval_expired : std_logic;
 signal motor_on : std_logic;
