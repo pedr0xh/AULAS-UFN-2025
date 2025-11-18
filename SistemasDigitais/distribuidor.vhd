@@ -1,62 +1,73 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-
 
 entity distribuidor is
-generic (
-CLK_FREQ_HZ : integer := 50000000; 
-DEFAULT_INTERVAL_SEC : integer := 10 
-);
-port (
-clk : in std_logic;
-rst_n : in std_logic;
-btn_manual : in std_logic; 
-interval_set : in std_logic_vector(7 downto 0);
-led_wait : out std_logic;
-led_dispense: out std_logic;
-led_motor : out std_logic;
-motor_out : out std_logic
-);
-end entity;
+    Port(
+        clk        : in  std_logic;
+        reset      : in  std_logic;
+        motor_out  : out std_logic;
+        led_wait   : out std_logic;
+        led_dispense : out std_logic
+    );
+end distribuidor;
 
+architecture Behavioral of distribuidor is
 
-architecture rtl of distribuidor is
-signal interval_ticks : unsigned(31 downto 0);
-signal interval_expired : std_logic;
-signal motor_on : std_logic;
-signal dispense_request : std_logic;
+    component timer
+        Port(
+            clk : in std_logic;
+            reset : in std_logic;
+            tick : out std_logic
+        );
+    end component;
 
+    component motor
+        Port(
+            enable    : in  std_logic;
+            motor_out : out std_logic
+        );
+    end component;
+
+    type state_type is (ESPERA, DISPENSA);
+    signal state, next_state : state_type;
+
+    signal tick_s : std_logic := '0';
+    signal motor_signal : std_logic := '0';
 
 begin
 
+    T1: timer port map(clk => clk, reset => reset, tick => tick_s);
+    M1: motor port map(enable => motor_signal, motor_out => motor_out);
 
-process(interval_set)
-variable secs : integer;
-variable ticks : integer;
-begin
-secs := to_integer(unsigned(interval_set));
-if secs = 0 then
-secs := DEFAULT_INTERVAL_SEC;
-end if;
-ticks := secs * CLK_FREQ_HZ;
-interval_ticks <= to_unsigned(ticks, 32);
-end process;
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            state <= ESPERA;
+        elsif rising_edge(clk) then
+            state <= next_state;
+        end if;
+    end process;
 
+    -- Lógica da FSM
+    process(state, tick_s)
+    begin
+        motor_signal <= '0';
+        led_wait <= '0';
+        led_dispense <= '0';
+        next_state <= state;
 
-timer_i: entity work.timer_counter
-generic map (
-WIDTH => 32
-)
-port map (
-clk => clk,
-rst_n => rst_n,
-enable => '1',
-limit => interval_ticks,
-expired => interval_expired
-);
+        case state is
+            when ESPERA =>
+                led_wait <= '1';
+                if tick_s = '1' then
+                    next_state <= DISPENSA;
+                end if;
 
+            when DISPENSA =>
+                led_dispense <= '1';
+                motor_signal <= '1';
+                next_state <= ESPERA;
+        end case;
+    end process;
 
-fsm_i: entity work.fsm_controller
-generic map (
-end architecture;
+end Behavioral;
