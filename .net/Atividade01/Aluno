@@ -1,0 +1,22 @@
+using System;
+
+public class Aluno
+{
+    string nome;
+    int idade;
+    string matricula;
+
+    public Aluno(string nome, int idade, string matricula)
+    {
+        this.nome = nome;
+        this.idade = idade;
+        this.matricula = matricula;
+    }
+
+    public void Apresentar()
+    {
+        Console.WriteLine("Nome: " + nome);
+        Console.WriteLine("Idade: " + idade);
+        Console.WriteLine("Matricula: " + matricula);
+    }
+}
